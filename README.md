@@ -39,7 +39,7 @@ pseudo code:
 </td></tr>
 </table>
 
-<b>Final result:</b>
+<b>Final result:</b>  
 sum - represents the sum of LIS till this node.  
 count - represents the number of LIS such that this node is the last number.  
 child index - represents the index of the first child of this node.  
