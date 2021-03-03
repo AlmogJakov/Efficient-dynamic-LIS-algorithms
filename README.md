@@ -16,6 +16,11 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 <b>Note!</b> Only 'sum' variable is needed for this implementation!  
 'count' and 'child index' variables are used only for the output of all LIS as shown below.  
 
+<b>Sum</b>  - represents the sum of LIS till this node.  
+<b>Count</b>  - represents the number of LIS such that this node is the last number.  
+<b>Child index</b>  - represents the index of the first child of this node.  
+
+
 ```diff
 pseudo code:
 • perform binary search on last
@@ -38,11 +43,6 @@ pseudo code:
 <p align="center"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM-M.gif"/></p>
 </td></tr>
 </table>
-
-
-<b>Sum</b>  - represents the sum of LIS till this node.  
-<b>Count</b>  - represents the number of LIS such that this node is the last number.  
-<b>Child index</b>  - represents the index of the first child of this node.  
 
 Therefore, the last element sum is the number of LIS (as marked in red in the image below).  
 <b>Final result:</b>  
