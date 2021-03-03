@@ -43,6 +43,7 @@ pseudo code:
 sum - represents the sum of LIS till this node.  
 count - represents the number of LIS such that this node is the last number.  
 child index - represents the index of the first child of this node.  
+
 Therefore, the last element sum is the number of LIS (in red).  
 & the number of rows is the length of the LIS.  
 <table align="center">
