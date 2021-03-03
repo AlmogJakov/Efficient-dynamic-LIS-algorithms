@@ -1,4 +1,4 @@
-# check
+# Efficient LIS algorithms
 
 🏆 Competitive assignment.  
 I wrote the algorithms for a competitive assignment at my university.  
