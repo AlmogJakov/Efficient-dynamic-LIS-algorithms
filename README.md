@@ -9,7 +9,7 @@ LIS length = number of rows.
 LIS number = the 'sum' variable in the last element (the last element in the last row).
 
 <b>Note!</b> Only 'sum' variable is needed for this implementation!  
-The 'count' and 'child index' variables are used only for the output of all LIS as shown below  
+'count' and 'child index' variables are used only for the output of all LIS as shown below.  
 
 ```diff
  pseudo code:
