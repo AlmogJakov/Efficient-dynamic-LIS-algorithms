@@ -46,7 +46,7 @@ pseudo code:
 <b>Animated Example of getting the number of LIS (with pseudo code):</b>
 <table align="center">
 <tr><td> 
-<p align="left"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM-M.gif"/></p>
+<p align="left"><img src="https://github.com/AlmogJakov/Efficient-dynamic-LIS-algorithms/raw/main/images/LIS-NUM-M.gif"/></p>
 </td></tr>
 </table>
 
@@ -56,7 +56,7 @@ Therefore, the last element sum is the number of LIS (as marked in red in the im
 
 <table align="center" width="500">
 <tr align="left" width="500"><td align="left" width="500"> 
-<p align="left" width="400"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM.jpg" width="400"/></p>
+<p align="left" width="400"><img src="https://github.com/AlmogJakov/Efficient-dynamic-LIS-algorithms/raw/main/images/LIS-NUM.jpg" width="400"/></p>
 </td></tr>
 </table>
 
@@ -105,7 +105,7 @@ pseudo code:
 <b>Animated Example of getting the output of all LIS (with pseudo code):</b>
 <table align="center">
 <tr><td> 
-<p align="center"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-STRS-M.gif"/></p>
+<p align="center"><img src="https://github.com/AlmogJakov/Efficient-dynamic-LIS-algorithms/raw/main/images/LIS-STRS-M.gif"/></p>
 </td></tr>
 </table>
 
@@ -113,6 +113,6 @@ pseudo code:
 
 <table align="center" width="500">
 <tr align="left" width="500"><td align="left" width="500"> 
-<p align="left" width="400"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-STRS.jpg" width="400"/></p>
+<p align="left" width="400"><img src="https://github.com/AlmogJakov/Efficient-dynamic-LIS-algorithms/raw/main/images/LIS-STRS.jpg" width="400"/></p>
 </td></tr>
 </table>
