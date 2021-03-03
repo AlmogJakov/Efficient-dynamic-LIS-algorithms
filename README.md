@@ -8,7 +8,7 @@ but it is certainly possible to optimize the runtimes of the algorithms.
 <b>Note!</b> for each algorithm there is an animated image that illustrates the implementation.  
 (The movement of the frames in the animation is relatively slow for the purpose of tracking each step).
 
-1️⃣ Return LIS number & length Complexity: nlog(n).
+1️⃣ Return LIS number & length Complexity: nlog(n).  
 2️⃣ Return all LIS Complexity: sumOfLIS * lengthOfLIS.
 
 -----
