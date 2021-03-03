@@ -47,8 +47,8 @@ Therefore, the last element sum is the number of LIS (as marked in red in the im
 & the number of rows is the length of the LIS.  
 <b>Final result:</b>  
 
-<table align="center">
-<tr align="center"><td align="center"> 
+<table align="center" width="450">
+<tr align="center" width="450"><td align="center" width="450"> 
 <p align="center" width="450"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM.jpg" width="400"/></p>
 </td></tr>
 </table>
