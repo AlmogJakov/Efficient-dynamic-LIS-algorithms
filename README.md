@@ -42,7 +42,8 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 -----
 
 <h2>Output all the LIS (to two-dimensional array)</h2>
-<b>Total Complexity: nlog(n) + sumOfLIS * lengthOfLIS.</b>  
+<b>Total Complexity: nlog(n) + sumOfLIS * lengthOfLIS.</b>
+
 <b>Complexity after running the above algorithm: sumOfLIS * lengthOfLIS.</b>
 
 -----
