@@ -3,6 +3,7 @@
 
 <h2>Calculate the number (and length) of LIS</h2>
 <b>Complexity: nlog(n).</b>
+
 -----
 
 By dynamic programming it is possible to calculate the length and number of LIS in the complexity of nlog(n).  
