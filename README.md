@@ -116,3 +116,6 @@ pseudo code:
 <p align="left" width="400"><img src="https://github.com/AlmogJakov/Efficient-dynamic-LIS-algorithms/raw/main/images/LIS-STRS.jpg" width="400"/></p>
 </td></tr>
 </table>
+
+-----
+Almog Jakov: https://github.com/AlmogJakov
