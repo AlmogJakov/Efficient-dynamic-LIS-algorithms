@@ -75,8 +75,8 @@ As we mentioned above in the algorithm above we have already calculated the vari
 <b>Child index</b>  - represents the index of the first child of this node.  
 
 Since for each node there is a 'count' variable we can always know how many LIS strings there are under the node  
-In addition, since for each node there is a 'child index' variable, we can always iterate to the son of the node.  
-- In each row the nodes are arranged in ascending order according to the index so if the father has several LIS strings under him and one of the sons has no LIS strings at all under him then we will necessarily have to go to the next son to get the rest of the strings.  
+In addition, since for each node there is a 'child index' variable (by default - the first child), we can always iterate to the child of the node.  
+- In each row the nodes are arranged in ascending order according to the index so if the parent has several LIS strings under him and one of the childs has no LIS strings at all under him then we will necessarily have to go to the next child to build the rest of the strings.  
 - If during the algorithm we access a certain node whose value has a count = 0, then we necessarily accessed a node through another parent and therefore we will have to restore the 'count' and 'child index' values in order to continue building the strings of the other parent.  
 
 ```diff
