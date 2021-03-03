@@ -17,7 +17,7 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 'count' and 'child index' variables are used only for the output of all LIS as shown below.  
 
 ```diff
- pseudo code:
+pseudo code:
 • perform binary search on last
    elements on each row.
 • add the new element to the row.
@@ -49,9 +49,9 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 -----
 
 ```diff
- pseudo code:
-perform iteration on last row while element count > 0
-& iterate between each path by childs index
+pseudo code:
+ perform iteration on last row while element count > 0
+ & iterate between each path by childs index
 
     while element count > 0:
          • add num to arr[row][col].
