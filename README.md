@@ -1,12 +1,12 @@
 # check
 
-<b>Animated Example of getting the number of LIS (with pseudo code):</b>
-By dynamic programming it is possible to calculate the length and number of strings of the LIS in the complexity of nlogn.
-After performing the pseudo code attached below we will conclude:
-LIS length = number of rows.
-LIS number = the 'sum' variable in the last element (the last element in the last row).
-<b>Note!</b> Only the variable 'sum' is needed but no 'count' and 'child index' variables are needed.
-The 'count' and 'child index' variables are used only for the output of all LIS as we will see below.
+<b>Animated Example of getting the number of LIS (with pseudo code):</b>  
+By dynamic programming it is possible to calculate the length and number of strings of the LIS in the complexity of nlogn.  
+After performing the pseudo code attached below we will conclude:  
+LIS length = number of rows.  
+LIS number = the 'sum' variable in the last element (the last element in the last row).  
+<b>Note!</b> Only the variable 'sum' is needed but no 'count' and 'child index' variables are needed.  
+The 'count' and 'child index' variables are used only for the output of all LIS as we will see below.  
 
 ```diff
  pseudo code:
