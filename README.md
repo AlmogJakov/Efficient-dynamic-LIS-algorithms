@@ -1,6 +1,6 @@
 # check
 
-🏆 Competitive assignment 🏆  
+🏆 Competitive assignment.  
 I wrote the algorithms for a competitive assignment at my university.  
 I have written the algorithms I have attached here a little more clearly for understanding,  
 but it is certainly possible to optimize the runtimes of the algorithms.
