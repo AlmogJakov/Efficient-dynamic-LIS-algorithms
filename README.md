@@ -2,6 +2,7 @@
 
 
 <h2>Calculate the number (and length) of LIS</h2>
+<h3>Complexity: nlog(n).</h3>
 
 By dynamic programming it is possible to calculate the length and number of LIS in the complexity of nlog(n).  
 After performing the pseudo code attached below we will conclude:  
@@ -35,6 +36,9 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 </table>
   
 <h2>Output all the LIS (to two-dimensional array)</h2>
+<h3>Total Complexity: nlog(n) + sumOfLIS * lengthOfLIS.</h3>
+<h3>Complexity after running the above algorithm: sumOfLIS * lengthOfLIS.</h3>
+
 <b>Animated Example of getting the output of all LIS (with pseudo code):</b>
 <table align="center">
 <tr><td> 
