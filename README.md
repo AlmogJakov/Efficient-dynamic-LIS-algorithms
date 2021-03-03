@@ -1,6 +1,6 @@
 # check
 
-<b>Animated Example of getting the number of LIS (with pseudo code):</b>  
+
 By dynamic programming it is possible to calculate the length and number of strings of the LIS in the complexity of nlogn.  
 After performing the pseudo code attached below we will conclude:  
 LIS length = number of rows.  
@@ -24,7 +24,7 @@ The 'count' and 'child index' variables are used only for the output of all LIS 
   (+) new element sum
   (-) sum of the element left to the new element.
 ```
-
+<b>Animated Example of getting the number of LIS (with pseudo code):</b>
 <table align="center">
 <tr><td> 
 <p align="center"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM-M.gif"/></p>
