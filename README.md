@@ -4,7 +4,7 @@
 <h2>Calculate the number (and length) of LIS</h2>
 By dynamic programming it is possible to calculate the length and number of LIS in the complexity of nlog(n).  
 After performing the pseudo code attached below we will conclude:  
-LIS length = number of rows.  
+LIS length = number of rows.   
 LIS number = the 'sum' variable in the last element (the last element in the last row).  
 <b>Note!</b> Only the variable 'sum' is needed but no 'count' and 'child index' variables are needed.  
 The 'count' and 'child index' variables are used only for the output of all LIS as we will see below.  
