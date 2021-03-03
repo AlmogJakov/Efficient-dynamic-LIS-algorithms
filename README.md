@@ -39,7 +39,7 @@ pseudo code:
 <b>Animated Example of getting the number of LIS (with pseudo code):</b>
 <table align="center">
 <tr><td> 
-<p align="center"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM-M.gif"/></p>
+<p align="left"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM-M.gif"/></p>
 </td></tr>
 </table>
 
