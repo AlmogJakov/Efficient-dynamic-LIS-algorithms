@@ -48,6 +48,29 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 
 -----
 
+```diff
+ pseudo code:
+perform iteration on last row while element count > 0
+& iterate between each path by childs index
+
+    while element count > 0:
+         • add num to arr[row][col].
+         • col = col - 1.
+         • pointer = pointer child.
+         • if pointer count = 0:
+                restore pointer child index variable.
+         • pointer count = pointer count - 1.
+         • if pointer count == 0 & parent count > 0:
+                parent child index = parent child index + 1.
+         • if col == 0:
+                add num to arr[row][col].
+                col = cols size.
+                row = row - 1.
+                pointer = head.
+                pointer count = pointer count - 1.
+    end while
+```
+
 <b>Animated Example of getting the output of all LIS (with pseudo code):</b>
 <table align="center">
 <tr><td> 
