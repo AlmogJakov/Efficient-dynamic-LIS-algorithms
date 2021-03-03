@@ -49,7 +49,7 @@ Therefore, the last element sum is the number of LIS (as marked in red in the im
 
 <table align="center">
 <tr align="center"><td align="center"> 
-<p align="center"><img align="center" src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM.jpg" width="400"/></p>
+<p align="center" width="450"><img src="https://github.com/AlmogJakov/check/raw/main/LIS-NUM.jpg" width="400"/></p>
 </td></tr>
 </table>
 
