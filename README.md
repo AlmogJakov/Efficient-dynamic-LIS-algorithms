@@ -20,7 +20,6 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 <b>Count</b>  - represents the number of LIS such that this node is the last number.  
 <b>Child index</b>  - represents the index of the first child of this node.  
 
-
 ```diff
 pseudo code:
 • perform binary search on last
