@@ -5,7 +5,7 @@ I wrote the algorithms for a competitive assignment at my university.
 I have written the algorithms I have attached here a little more clearly for understanding,  
 but it is certainly possible to optimize the runtimes of the algorithms.  
 
-<b>Note!</b> for each algorithm i created an animated image that illustrates the implementation.  
+<b>Note!</b> for each algorithm I created an animated image that illustrates the implementation.  
 (The movement of the frames in the animation is relatively slow for the purpose of tracking each step).
 
 1️⃣ Return LIS number & length Complexity: nlog(n).  
@@ -18,8 +18,8 @@ but it is certainly possible to optimize the runtimes of the algorithms.
 
 -----
 
-By dynamic programming it is possible to calculate the length and number of LIS in the complexity of nlog(n).  
-After performing the pseudo code attached below we will conclude:  
+By dynamic programming, it is possible to calculate the length and number of LIS in the complexity of nlog(n).  
+After performing the pseudo-code attached below we will conclude:  
 LIS length = number of rows.  
 LIS number = the 'sum' variable in the last element (the last element in the last row).
 
@@ -31,18 +31,18 @@ LIS number = the 'sum' variable in the last element (the last element in the las
 <b>Child index</b>  - represents the index of the first child of this node.  
 
 ```diff
-pseudo code:
+pseudo-code:
 • perform binary search on last
    elements on each row.
 • add the new element to the row.
-• perform binary search on previous row
+• perform binary search on the previous row
    first child index =
   (+) founded index + 1.
 • new element sum =
-  (+) sum of the last element on previous row
+  (+) sum of the last element on the previous row
   (-) sum of the element left to first child 
   (+) sum of the element left to the new element.
-• new elemnt count =
+• new element count =
   (+) new element sum
   (-) sum of the element left to the new element.
 ```
@@ -77,15 +77,15 @@ As we mentioned above in the algorithm above we have already calculated the vari
 <b>Count</b>  - represents the number of LIS such that this node is the last number.  
 <b>Child index</b>  - represents the index of the first child of this node.  
 
-Since for each node there is a 'count' variable we can always know how many LIS strings there are under the node  
-In addition, since for each node there is a 'child index' variable (by default - the first child), we can always iterate to the child of the node.  
-- In each row the nodes are arranged in ascending order according to the index so if the parent has several LIS strings under him and one of the childs has no LIS strings at all under him then we will necessarily have to go to the next child to build the rest of the strings.  
+Since for each node, there is a 'count' variable we can always know how many LIS strings there are under the node  
+In addition, since for each node, there is a 'child index' variable (by default - the first child), we can always iterate to the child of the node.  
+- In each row, the nodes are arranged in ascending order according to the index so if the parent has several LIS strings under him and one of the children has no LIS strings at all under him then we will necessarily have to go to the next child to build the rest of the strings.  
 - If during the algorithm we access a certain node whose value has a count = 0, then we necessarily accessed a node through another parent and therefore we will have to restore the 'count' and 'child index' values in order to continue building the strings of the other parent.  
 
 ```diff
-pseudo code:
- perform iteration on last row while element count > 0
- & iterate between each path by childs index
+pseudo-code:
+ perform iteration on the last row while element count > 0
+ & iterate between each path by child's index
 
     while element count > 0:
          • add num to arr[row][col].
