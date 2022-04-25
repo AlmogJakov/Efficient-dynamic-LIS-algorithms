@@ -6,7 +6,9 @@ I have written the algorithms I have attached here a little more clearly for und
 but it is certainly possible to optimize the runtimes of the algorithms.  
 
 <b>Note!</b> for each algorithm I created an animated image that illustrates the implementation.  
-(The movement of the frames in the animation is relatively slow for the purpose of tracking each step).
+(The movement of the frames in the animation is relatively slow for the purpose of tracking each step).   
+
+The algorithms work on input of numbers so that each number has a single instance (no repetitions).
 
 1️⃣ Return LIS number & length Complexity: nlog(n).  
 2️⃣ Return all LIS Complexity: sumOfLIS * lengthOfLIS.
