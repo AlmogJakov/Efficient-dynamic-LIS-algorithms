@@ -1,8 +1,8 @@
 # Efficient dynamic LIS algorithms
 
 🏆 Competitive assignment.  
-I developed this algorithms for a competitive assignment at my university.  
-I have written the algorithms I have attached here a little more clearly for understanding,  
+I developed the following algorithms for a competitive assignment at my university.  
+I wrote the algorithms I attached here in a way that is a little clearer to understand,
 but it is certainly possible to optimize the runtimes of the algorithms.  
 
 <b>Note</b> that for each algorithm I created an animated image that illustrates the implementation.  
