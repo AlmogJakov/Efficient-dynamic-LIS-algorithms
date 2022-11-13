@@ -1,26 +1,38 @@
+package LIS.src;
+
 import java.util.ArrayList;
 
 class Node {
 	/* the number that this node represents */
 	int num;
-	/* count of the LIS number from this node to leaves nodes (decreased after each use) */
+	/*
+	 * count of the LIS number from this node to leaves nodes (decreased after each
+	 * use)
+	 */
 	int count;
-	/* variable to restore the original count in case of access from another parent */
+	/*
+	 * variable to restore the original count in case of access from another parent
+	 */
 	int restoreCount;
 	/* sum of the LIS number from previous nodes + this node */
 	int sum;
 	/* childs row index (all childs in the same row) */
 	int childsRow;
-	/* childs col indexes of this node (ordered one by one while firstChildCol is the first child) */
+	/*
+	 * childs col indexes of this node (ordered one by one while firstChildCol is
+	 * the first child)
+	 */
 	int firstChildCol;
 	/* pointer to iterate between the childs */
 	int ChildPointerCol;
+
 	/* Constructor */
 	public Node(int num) {
 		this.num = num;
-		restoreCount=0;
-		firstChildCol=0;
+		restoreCount = 0;
+		firstChildCol = 0;
 	}
+
 	/* Constructor */
 	public Node(int num, int sum, int count) {
 		this(num);
@@ -72,14 +84,17 @@ public class LIS {
 	////////////////////////////////////////////////////////////////////////////
 
 	public int lengthLIS() {
-		if (len==0) lengthLIS = true;
-		if (lengthLIS) return LisLen;
+		if (len == 0)
+			lengthLIS = true;
+		if (lengthLIS)
+			return LisLen;
 		int newarr[] = new int[len];
 		int pointer = 0, size = 0;
 		newarr[0] = arr[0];
 		for (int i = 1; i < arr.length; i++) {
 			pointer = binarySearch(newarr, size, arr[i]);
-			if (pointer > size) size++;
+			if (pointer > size)
+				size++;
 			newarr[pointer] = arr[i];
 		}
 		size++;
@@ -128,7 +143,7 @@ public class LIS {
 		ArrayList<Node> mid;
 		while (start <= end) {
 			mid = lists.get(middle);
-			if (mid.get(mid.size()-1).num < n)
+			if (mid.get(mid.size() - 1).num < n)
 				start = middle + 1;
 			else
 				end = middle - 1;
@@ -146,7 +161,8 @@ public class LIS {
 	private void init() {
 		/* make a list from the input array */
 		Arr = new ArrayList<Node>();
-		for (int i = 0; i < len; i++) Arr.add(new Node(arr[i]));
+		for (int i = 0; i < len; i++)
+			Arr.add(new Node(arr[i]));
 		/* initialize 'lists' variables */
 		lists = new ArrayList<ArrayList<Node>>();
 		this.max = new Node(Integer.MAX_VALUE, 0, 1);
@@ -158,8 +174,9 @@ public class LIS {
 	}
 
 	public int numOfLIS() {
-		if (numOfLIS) return numOfStrs;
-		if (len==0) {
+		if (numOfLIS)
+			return numOfStrs;
+		if (len == 0) {
 			numOfStrs = 0;
 			numOfLIS = true;
 			return numOfStrs;
@@ -173,37 +190,42 @@ public class LIS {
 		for (int i = 0; i < len; i++) {
 			curr = Arr.get(i);
 			currNodeRow = numLisBSearch(curr.num);
-			if (currNodeRow > lists.size() - 1) createNewList();
-//			/* The following code snippet is for inputs of an array in which duplicates of numbers appear */
-//			/* in case there is duplicated numbers - merge the Nodes! */
-//			else if (lists.get(currNodeRow).get(lists.get(currNodeRow).size()-1).num==curr.num) {
-//				currRowList = lists.get(currNodeRow);
-//				prevRowList = lists.get(currNodeRow - 1);
-//				largestChild = numLdsBSearch(prevRowList, curr.num);
-//				if (curr.num != prevRowList.get(largestChild).num) largestChild--;
-//				int lastRowSum = prevRowList.get(prevRowList.size()-1).sum - prevRowList.get(largestChild).sum;
-//				/* merge by adding lastRowSum to current sum */
-//				currRowList.get(currRowList.size()-1).sum += lastRowSum;
-//				/* merge by adding lastRowSum to current count */
-//				currRowList.get(currRowList.size()-1).count += lastRowSum;
-//				printListsC();
-//				continue;
-//			}
-//			/* end duplicated numbers code */
+			if (currNodeRow > lists.size() - 1)
+				createNewList();
+			// /* The following code snippet is for inputs of an array in which duplicates
+			// of numbers appear */
+			// /* in case there is duplicated numbers - merge the Nodes! */
+			// else if
+			// (lists.get(currNodeRow).get(lists.get(currNodeRow).size()-1).num==curr.num) {
+			// currRowList = lists.get(currNodeRow);
+			// prevRowList = lists.get(currNodeRow - 1);
+			// largestChild = numLdsBSearch(prevRowList, curr.num);
+			// if (curr.num != prevRowList.get(largestChild).num) largestChild--;
+			// int lastRowSum = prevRowList.get(prevRowList.size()-1).sum -
+			// prevRowList.get(largestChild).sum;
+			// /* merge by adding lastRowSum to current sum */
+			// currRowList.get(currRowList.size()-1).sum += lastRowSum;
+			// /* merge by adding lastRowSum to current count */
+			// currRowList.get(currRowList.size()-1).count += lastRowSum;
+			// printListsC();
+			// continue;
+			// }
+			// /* end duplicated numbers code */
 			currRowList = lists.get(currNodeRow);
 			prevRowList = lists.get(currNodeRow - 1);
 			largestChild = numLdsBSearch(prevRowList, curr.num);
-			if (curr.num != prevRowList.get(largestChild).num) largestChild--;
-			int lastRowSum = prevRowList.get(prevRowList.size()-1).sum - prevRowList.get(largestChild).sum;
+			if (curr.num != prevRowList.get(largestChild).num)
+				largestChild--;
+			int lastRowSum = prevRowList.get(prevRowList.size() - 1).sum - prevRowList.get(largestChild).sum;
 			curr.ChildPointerCol = largestChild + 1;
 			curr.childsRow = currNodeRow - 1;
-			curr.sum = lastRowSum + currRowList.get(currRowList.size()-1).sum;
+			curr.sum = lastRowSum + currRowList.get(currRowList.size() - 1).sum;
 			currRowList.add(curr);
-			curr.count += curr.sum - currRowList.get(currRowList.size()-2).sum;
+			curr.count += curr.sum - currRowList.get(currRowList.size() - 2).sum;
 			curr.restoreCount = curr.count;
 		}
-		ArrayList<Node> lastRow = lists.get(lists.size()-1);
-		numOfStrs = lastRow.get(lastRow.size()-1).sum;
+		ArrayList<Node> lastRow = lists.get(lists.size() - 1);
+		numOfStrs = lastRow.get(lastRow.size() - 1).sum;
 		LisLen = lists.size() - 1;
 		lengthLIS = true;
 		numOfLIS = true;
@@ -220,8 +242,9 @@ public class LIS {
 	private int[][] oneLIS() {
 		int[][] result = new int[1][LisLen];
 		int col = LisLen - 1;
-		ArrayList<Node> last = lists.get(lists.size()-1);
-		if (last.size() < 2) return result;
+		ArrayList<Node> last = lists.get(lists.size() - 1);
+		if (last.size() < 2)
+			return result;
 		Node child = last.get(1);
 		while (col > 0) {
 			result[0][col--] = child.num;
@@ -232,18 +255,21 @@ public class LIS {
 	}
 
 	public int[][] allLIS() {
-		if (!numOfLIS) numOfLIS();
-		if (LisLen==0) {
+		if (!numOfLIS)
+			numOfLIS();
+		if (LisLen == 0) {
 			allLIS = true;
 			allLis = new int[0][0];
 			return allLis;
 		}
-		if (numOfStrs > teta) return oneLIS();
-		if (allLIS) return allLis;
+		if (numOfStrs > teta)
+			return oneLIS();
+		if (allLIS)
+			return allLis;
 		allLis = new int[numOfStrs][LisLen];
 		int row = numOfStrs - 1;
 		int col = LisLen - 1;
-		ArrayList<Node> last = lists.get(lists.size()-1);
+		ArrayList<Node> last = lists.get(lists.size() - 1);
 		Node head;
 		Node parent;
 		Node child;
@@ -261,15 +287,18 @@ public class LIS {
 					child.firstChildCol = 0;
 				}
 				child.count--;
-//				/* The following code snippet is for inputs of an array in which duplicates of numbers appear */
-//				if (child.count == 0 && parent.count > 0 && lists.get(parent.childsRow).size()>parent.ChildPointerCol+1) {
-//				/* end duplicated numbers code */
+				// /* The following code snippet is for inputs of an array in which duplicates
+				// of numbers appear */
+				// if (child.count == 0 && parent.count > 0 &&
+				// lists.get(parent.childsRow).size()>parent.ChildPointerCol+1) {
+				// /* end duplicated numbers code */
 				if (child.count == 0 && parent.count > 0) {
 					parent.ChildPointerCol++;
 					parent.firstChildCol++;
 				}
 				if (col <= 0) {
-					if (col==0) allLis[row][col] = child.num;
+					if (col == 0)
+						allLis[row][col] = child.num;
 					col = LisLen - 1;
 					row--;
 					child = head;
@@ -280,5 +309,9 @@ public class LIS {
 		}
 		allLIS = true;
 		return allLis;
+	}
+
+	public int getTeta() {
+		return teta;
 	}
 }
